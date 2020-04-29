@@ -1,0 +1,10 @@
+<div class="card-columns m-5">
+  <div class="card" style="width: 18rem;" *ngFor="let populares of peliculasPopulares">
+    <img src="http://image.tmdb.org/t/p/w300/{{populares.poster_path}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{populares.title}}</h5>
+      <p class="card-text">{{populares.overview}}</p>
+      <a [routerLink]="['/pelicula', populares.id, 'home', populares.title]" routerLinkActive="router-link-active"  class="btn btn-primary">Ver Mas...</a>
+    </div>
+  </div>
+</div>

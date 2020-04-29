@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 text-center">
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" id="home-tab" data-toggle="tab" [routerLink]="['populares']"
+            routerLinkActive="router-link-active" role="tab" aria-controls="home" aria-selected="true">Populares</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="profile-tab" data-toggle="tab" [routerLink]="['cartelera']"
+            routerLinkActive="router-link-active" role="tab" aria-controls="profile" aria-selected="false">Cartelera</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id="contact-tab" data-toggle="tab" [routerLink]="['kids']"
+            routerLinkActive="router-link-active" role="tab" aria-controls="contact" aria-selected="false">Kids</a>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+<router-outlet></router-outlet>

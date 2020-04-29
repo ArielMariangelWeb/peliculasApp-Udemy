@@ -1,0 +1,28 @@
+<div class="container main-container">
+    <div class="col-md-12">
+        <div class="form-group">
+            <label>Buscar:</label>
+            <input [(ngModel)]="buscar"
+             name="buscar"
+             (keyup.enter)="buscarPelicula()"
+             type="text"
+             class="form-control"
+             placeholder="Buscar una pelicula">
+        </div>
+
+    </div>
+
+    <div class="row">
+        <div class="card-columns m-5">
+            <div class="card" style="width: 18rem;" *ngFor="let pelicula of peliculas">
+                <img src="http://image.tmdb.org/t/p/w300/{{pelicula.poster_path}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{pelicula.title}}</h5>
+                  <p class="card-text">{{pelicula.overview}}</p>
+                  <a [routerLink]="['/pelicula', pelicula.id, 'search', buscar]" routerLinkActive="router-link-active"  class="btn btn-primary">Ver Mas...</a>
+                </div>
+              </div>
+        </div>
+
+    </div>
+</div>
